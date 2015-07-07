@@ -48,20 +48,24 @@ end
 # #Mult table
 puts "Specify size of multiplication chart (i.e. specifying '9' will result in a chart with 81 entries)"
 input = gets.chomp.to_i
+for label in 1..input 
+	print "   " + label.to_s 
+end
+print "\n\n"
 for current_col in 1..input
-	print current_col.to_s + "|  "
 	current_row = 1
+	print current_col.to_s + "|  "
 	while current_row<= input
 		if current_row*current_col < 10
 			print (current_row*current_col).to_s + "   "
 		else
-		print (current_row*current_col).to_s + "  "
-	end
+			print (current_row*current_col).to_s + "  "
+		end
 		current_row+=1
 	end
 	print "\n"
 end
-
+	
 # reverse string
 # puts "Enter a string"
 # input = gets.chomp
